@@ -1,5 +1,5 @@
 
-# express-typescript-api-gateway application
+# api-gateway application
 
 This is a simple API gateway application for register and redirect to others microservices.
 
