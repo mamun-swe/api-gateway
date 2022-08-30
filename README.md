@@ -3,7 +3,7 @@
 
 This is a simple API gateway application for register and redirect to others microservices.
 
-![ScreenShot](/api-gateway.png)
+![ScreenShot](/assets/api-gateway.png)
 
 ### Running the application
 
