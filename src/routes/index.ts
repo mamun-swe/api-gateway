@@ -3,13 +3,13 @@ import { IRoutes } from "../types"
 
 export const ROUTES: IRoutes[] = [
     {
-        url: "/shopping-cart",
+        url: "/<Your preferable URL>", /* URL want to browse after domain like as https://www.google.com/anything */
         auth: true,
         proxy: {
-            target: "http://localhost:5000/",
+            target: "https://www.google.com/", /* Service URL which one you want to browse */
             changeOrigin: true,
             pathRewrite: {
-                [`^/shopping-cart`]: '',
+                [`^/<Your preferable URL>`]: '',  /* URL want to browse after domain like as https://www.google.com/anything */
             }
         }
     }
