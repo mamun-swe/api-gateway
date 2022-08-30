@@ -8,15 +8,15 @@ This is a simple API gateway application for register and redirect to others mic
 Create `.env` file to the root and copy all environment variables from `.env.example`.
 Register your services to `/src/routes/index.ts`. example are given below.
 
-```
+```JS
 {
-    url: "/<Your preferable URL>", /* URL want to browse after domain like as https://www.google.com/anything */
+    url: "/<Your preferable URL>",
     auth: true,
     proxy: {
-        target: "https://www.google.com/", /* Service URL which one you want to browse */
+        target: "https://www.google.com/",
         changeOrigin: true,
         pathRewrite: {
-            [`^/<Your preferable URL>`]: '',  /* URL want to browse after domain like as https://www.google.com/anything */
+            [`^/<Your preferable URL>`]: '', 
         }
     }
 }
