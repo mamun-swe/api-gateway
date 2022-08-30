@@ -4,7 +4,6 @@ import dotenv from "dotenv"
 dotenv.config()
 import { setupLogging } from "./src/middleware/logging.middleware"
 import { setupProxies } from "./src/middleware/proxy.middleware"
-import { setupAuthentication } from "./src/middleware/authenticate.middleware"
 import { IService } from "./src/types"
 import { ROUTES } from "./src/routes"
 
@@ -13,7 +12,6 @@ const PORT = process.env.PORT || 3000
 
 setupLogging(app)
 setupProxies(app, ROUTES)
-setupAuthentication(app, ROUTES)
 
 /* Root route */
 app.get("/", (req: Request, res: Response, next: NextFunction) => {
@@ -21,8 +19,7 @@ app.get("/", (req: Request, res: Response, next: NextFunction) => {
 
     for (let i = 0; i < ROUTES.length; i++) {
         services.push({
-            service: req.protocol + "://" + req.get('Host') + ROUTES[i].url,
-            authentication: ROUTES[i].auth
+            service_path: req.protocol + "://" + req.get('Host') + ROUTES[i].url
         })
     }
 
