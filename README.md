@@ -44,4 +44,4 @@ Build the server:
 npm run build
 ```
 
-When the application starts, navigate to `http://localhost:3000` you will show the services URL you set register to gateway.
+When the application starts, navigate to `http://localhost:3000` you will show the services URL you set to the gateway.
